@@ -16,10 +16,10 @@
     <title>Document</title>
 </head>
 
-<body>
-    <nav class="light-blue lighten-1" role="navigation">
-        <div class="nav-wrapper container"><a id="logo-container" href="/" class="brand-logo">Django IFCE</a>
-            <ul class="right hide-on-med-and-down">
+<body >
+    <nav class="navbar navbar-dark bg-primary" role="navigation" style="background-color: blueviolet;">
+        <div class="nav-wrapper container" style="background-color: blueviolet;"><a id="logo-container" href="/" class="brand-logo" >Django IFCE</a>
+            <ul class="right hide-on-med-and-down" style="background-color: blueviolet;">
                 <li><a href="">Dashboard</a></li>
                 <!-- Dropdown Trigger -->
                 <li><a class="dropdown-trigger" href="#!" data-target="dropdown">Aluno<i
@@ -32,12 +32,12 @@
                 <li><a href="{% url 'aluno:add_aluno'  %}">Novo</a></li>
                 <li><a href="{% url 'aluno:lista_alunos' %}">Lista</a></li>
 
-                <ul id="nav-mobile" class="sidenav">
+                <ul id="nav-mobile" class="sidenav" style="background-color: blueviolet;">
                     <li><a href="">Dashboard</a></li>
                     <li><a href="">Perfil</a></li>
                     <li><a href="">Sair</a></li>
                     <li><a class="dropdown-trigger" href="#!" data-target="dropdown2">Dropdown<i
-                                class="material-icons right">arrow_drop_down</i></a></li>
+                                class="material-icons right" style="background-color: blueviolet;">arrow_drop_down</i></a></li>
                     <li><a href="">Criar Conta</a></li>
                     <li><a href="">Login</a></li>
                 </ul>
@@ -78,6 +78,7 @@
             gutter: 0, // Spacing from edge
             belowOrigin: true, // Displays dropdown below the button
             alignment: 'left' // 
+            
 
         });
         //DROPDOWN PROFESSOR

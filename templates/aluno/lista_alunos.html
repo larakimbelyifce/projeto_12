@@ -8,14 +8,14 @@
 {% block body %}
 
 <div class="container">
-    <h2>Lista de Alunos</h2>
+    <h2>Alunos</h2>
     <div class="row">
         <div class="col-md-12">
             <table class="table table-hover">
                 <thead>
                     <tr>
                         <!--<th scope="col">#</th>-->
-                        <th scope="col">Id</th>
+                        <th scope="col">Código</th>
                         <th scope="col">Nome</th>
                         <th scope="col">CPF</th>
                         <th scope="col">User</th>
@@ -33,8 +33,8 @@
                         <td>{{ aluno.user }}</td>
                         <td>{{ aluno.email}}</td>
                         <td>
-                            <a href="{% url 'aluno:edit_aluno' aluno.id %}" class="btn btn-primary btn-sm">Editar</a>
-                            <a href="{% url 'aluno:delete_aluno' aluno.id %}" class="btn btn-danger btn-sm confirm-delete" id="deleteButton-{{ aluno.id }}">Excluir</a>
+                            <a href="{% url 'aluno:edit_aluno' aluno.id %}" class="btn btn-primary btn-sm" style="background-color: blueviolet;">Editar</a>
+                            <a href="{% url 'aluno:delete_aluno' aluno.id %}" class="btn btn-danger btn-sm confirm-delete" style="background-color: blueviolet;" id="deleteButton-{{ aluno.id }}">Excluir</a>
                         </td>
                     </tr>
                     {% endfor %}

@@ -29,14 +29,13 @@ def edit_aluno(request, id_aluno):
         form = AlunoForm(request.POST, instance=aluno)
         if form.is_valid():
             form.save()
-            messages.success(request, "Aluno editado com sucesso!")
+            messages.success(request, "edição salva com sucesso!")
             return redirect('aluno:lista_alunos')
     form = AlunoForm(instance=aluno)
     context['form'] = form
     return render(request, template_name, context)
 
-# Chamar a url para renderizar a página html.
-# Classe para salvar os conteúdos no banco de dados.
+
 def AddAluno(request):
     template_name = 'aluno/add_aluno.html'
     context = {}
@@ -45,17 +44,9 @@ def AddAluno(request):
         if form.is_valid():
             f = form.save(commit=False)
             form.save()
-            messages.success(request, "Usuário salvo com sucesso!")
+            messages.success(request, "Aluno salvo com sucesso!")
         else:
-            messages.error(request, "Erro ao salvar dados!")
+            messages.error(request, "Erro de dados!")
     form = AlunoForm()
     context['form'] = form
     return render(request,template_name,context)
-
-#    def lista_alunos(request):
-#        template_name = 'aluno/lista_alunos.html'
-#        alunos = Aluno.objects.all().reverse()
-#        context = {
-#        'alunos':alunos 
-#        }
-#        return render(request, template_name, context)
